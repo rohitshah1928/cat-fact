@@ -19,7 +19,6 @@ const Home = () => {
 
     return (
         <div className={styles.maincontainer}>
-
             <div className={styles.container}>
                 <div className={styles.historyContainer}>
                     <Link to="/history" className={styles.history}>History</Link>

@@ -8,11 +8,11 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} /> {/* Add this line */}
         <Route path="/history" element={<History />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
     </BrowserRouter>
   );
 }
-
 export default App;

@@ -7,7 +7,7 @@ const persistConfig = {
   key: 'root',
   storage,
 }
-const rootReducer = combineReducers({ 
+export const rootReducer = combineReducers({ 
   cat: catSlice,
 })
 
