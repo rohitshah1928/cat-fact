@@ -1,0 +1,44 @@
+.container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+}
+
+.factList {
+    list-style-type: none;
+    padding: 0;
+}
+
+.factItem {
+    background-color: #f9f9f9;
+    margin: 10px 0;
+    padding: 10px 15px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.factItem:nth-child(odd) {
+    background-color: #efefef;
+}
+
+.factItem h3 {
+    margin: 0;
+    font-size: 1.2em;
+    color: #555;
+}
+
+.index {
+    font-weight: bold;
+    margin-right: 10px;
+    color: #000;
+}
