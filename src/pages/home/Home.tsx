@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { AppDispatch, RootState } from '../../redux/store';
-import { addLike, getCatFactData } from '../../redux/features/catSlice';
+import { addLike, getCatFactData, removeLike } from '../../redux/features/catSlice';
 import styles from './Home.module.css';
 import { Link } from 'react-router-dom';
 import ReactLoading from 'react-loading';
@@ -15,6 +15,9 @@ const Home = () => {
 
     const handleLike = () => {
         dispatch(addLike())
+    }
+    const handleDislike=()=>{
+        dispatch(removeLike())
     }
 
     return (
@@ -38,10 +41,10 @@ const Home = () => {
                                     />
 
                                     <div className={styles.reactions}>
-                                        <button onClick={() => handleLike} className={styles.reactionButton}>
+                                        <button onClick={ handleLike} className={styles.reactionButton}>
                                             Like
                                         </button>
-                                        <button className={styles.reactionButton}>
+                                        <button className={styles.reactionButton} onClick={ handleDislike}>
                                             Dislike
                                         </button>
                                     </div>

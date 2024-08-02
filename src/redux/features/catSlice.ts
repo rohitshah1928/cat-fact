@@ -12,7 +12,7 @@ const initialState: CatState = {
     cateImage: '',
     catFact: '',
     likedFact: [],
-    isLoading: true,
+    isLoading: false,
 };
 
 export const getCatFactData = createAsyncThunk('cat/catFact', async () => {
@@ -35,6 +35,9 @@ const catSlice = createSlice({
         addLike: (state) => {
             state.likedFact.push(state.catFact);
         },
+        removeLike: (state) => {
+            state.likedFact.pop();
+        },
     },
     extraReducers: (builder) => {
         builder
@@ -54,5 +57,5 @@ const catSlice = createSlice({
     },
 });
 
-export const { addLike } = catSlice.actions;
+export const { addLike,removeLike } = catSlice.actions;
 export default catSlice.reducer;
